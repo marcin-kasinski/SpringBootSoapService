@@ -1,0 +1,44 @@
+logging:
+    file: logs/application.log
+    level:
+        io:
+            micrometer:
+                graphite: DEBUG
+server:
+    port: 8080
+#    influxdbeserver: monitoring-influxdb.kube-system.svc.cluster.local                
+    influxdbeserver: monitoring-influxdb
+spring:
+    application:
+        name: SpringBootSoapService
+
+    zipkin:
+        #baseUrl: http://springbootzipkin:7777
+        baseUrl: http://zipkin.default.svc.cluster.local:9411            
+        sender:
+            type: web            
+    sleuth:
+        sampler:
+            percentage: 1
+            probability: 1
+endpoints:
+    prometheus:
+        enabled: true 
+management:
+    security:
+        enabled: false
+    endpoint:
+        metrics:
+            enabled: true
+        prometheus:
+            enabled: true 
+    endpoints:
+        web:
+            exposure:
+                include: "info, health, prometheus"
+        metrics:
+            enabled: true
+    metrics:
+        export:
+            prometheus:
+                enabled: true            
