@@ -12,6 +12,12 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+
+//http://springbootsoapservice:30080/ws/countries.wsdl
+//http://localhost:8080/ws/countries.wsdl
+//curl --header "content-type: text/xml" http://192.168.1.240:8080/ws/countries.wsdl
+//curl --header "content-type: text/xml" -d @request.xml http://10.110.151.235:8080/ws
+
 @EnableWs
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
