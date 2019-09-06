@@ -11,7 +11,7 @@ public class Application {
 	public static void main(String[] args) {
 		
 
-		System.out.println("Application ver 22.01.2019");
+		System.out.println("Application ver 06.09.2019");
 
 		
 	System.out.println("ENV variables");
@@ -22,8 +22,6 @@ public class Application {
 			System.out.format("%s=%s%n", envName, env.get(envName));
 		}
 
-
-		
 		SpringApplication.run(Application.class, args);
 	}
 }
