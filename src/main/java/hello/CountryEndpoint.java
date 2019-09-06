@@ -57,6 +57,17 @@ public class CountryEndpoint {
 		log.info("in:"+xmlrequest);
 		log.info("out:"+xmlresponse);
 		///////////////////////////////////////////////////////////////////////////////
+
+		try {
+			log.info("sleeping");
+			Thread.sleep(7000);
+			log.info("end");
+
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		return response;
 	}
 }
