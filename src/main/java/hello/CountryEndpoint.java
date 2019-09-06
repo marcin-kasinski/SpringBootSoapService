@@ -59,8 +59,8 @@ public class CountryEndpoint {
 		///////////////////////////////////////////////////////////////////////////////
 
 		try {
-			log.info("sleeping");
-			Thread.sleep(7000);
+			log.info("sleeping for 2 secs");
+			Thread.sleep(2000);
 			log.info("end");
 
 		} catch (InterruptedException e) {

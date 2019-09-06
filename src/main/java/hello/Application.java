@@ -11,7 +11,7 @@ public class Application {
 	public static void main(String[] args) {
 		
 
-		System.out.println("Application ver 06.09.2019");
+		System.out.println("Application ver 06.09.2019 13:37");
 
 		
 	System.out.println("ENV variables");
